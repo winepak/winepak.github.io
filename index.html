@@ -2,13 +2,154 @@
 <html>
 <head>
     <meta charset="UTF-8">
-	<title>winepak</title>
+	<title>winepak - Flatpak-ing Microsoft Windows applications with Wine</title>
+	<!--Meta Tags Descriptions, KeyWords, Author, and verify-v1-->
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="description" content="Flatpak-ing Microsoft Windows applications with Wine" />
+	<meta name="keywords" content="winepak,wine,flatpak,xdg-app,application,bundle,windows" />
+	<meta name="author" content="winepak Developers" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<!--Favicon Icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+	<!--CSS Files-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 <body>
-<h1>winepak</h1>
-<p>Flatpak-ing Microsoft Windows applications with Wine</p>
-<ul>
-    <li><a href="https://github.com/winepak/">GitHub Repo</a></li>
-</ul>
+<header id="top">
+    <div class="container">
+        <div id="logo">
+            <img alt="winepak" src="assets/images/logo.svg">
+            <span id="name">winepak</span>
+        </div>
+    </div>
+</header>
+<section id="landing">
+    <div class="container">
+        <div id="call-to-action-text">
+            <h2>Flatpak-ing Microsoft Windows applications with Wine</h2>
+            <p>Making Microsoft Windows applications Just Work&trade; under Linux</p>
+        </div>
+    </div>
+</section>
+<section id="setup">
+    <header>
+        <div class="container">
+            <h2>Setup</h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="step">
+            <div class="number">1</div>
+            <div class="instruction">
+                <p>Install <code>flatpak</code> by following the <a title="flatpak setup guide" href="https://flatpak.org/setup/">setup guide</a>, chances are your distribution already has it installed.</p>
+             </div>
+        </div>
+        
+        <div class="step">
+            <div class="number">2</div>
+            <div class="instruction">
+                <p>Add the Flathub repository by <a href="https://dl.winepak.org/repo/winepak.flatpakrepo">clicking here</a> or by running the following command in your terminal<p>
+                <pre><code>flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo</code></pre>
+             </div>
+        </div>
+        
+        <div class="step">
+            <div class="number">3</div>
+            <div class="instruction">
+                <p>Add the winepak repository by <a href="https://dl.flathub.org/repo/flathub.flatpakrepo">clicking here</a> or by running the following command in your terminal<p>
+                <pre><code>flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code></pre>
+             </div>
+        </div>
+        
+        <div class="step">
+            <div class="number">4</div>
+            <div class="instruction">
+                <p>Install an application using your software center or via the terminal<p>
+                <pre><code>flatpak install winepak tld.domain.Application</code></pre>
+             </div>
+        </div>
+    </div>
+</section>
+<section id="features">
+    <header>
+        <div class="container">
+            <h2>Features</h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="feature image-right">
+            <video autoplay muted loop>
+                <source src="assets/videos/features/setup.1280x720.webm" type="video/webm">
+                <img alt="" src="assets/images/placeholder.jpg">
+            </video>
+            <div class="description">
+                <h3>Simple Setup</h3>
+                <p>Add the winepak repository to access winepak catalog.</p>
+            </div>
+        </div>
+        
+        <div class="feature image-left">
+            <video autoplay muted loop>
+                <source src="assets/videos/features/search.1280x720.webm" type="video/webm">
+                <img alt="" src="assets/images/placeholder.jpg">
+            </video>
+            <div class="description">
+                <h3>Search</h3>
+                <p>Find the Microsoft Windows applications you want by searching the winepak repository, either via the software center or the terminal.</p>
+            </div>
+        </div>
+        
+        <div class="feature image-right">
+            <video autoplay muted loop>
+                <source src="assets/videos/features/integration.1280x720.webm" type="video/webm">
+                <img alt="" src="assets/images/placeholder.jpg">
+            </video>
+            <div class="description">
+                <h3>Integration</h3>
+                <p>winepak installs custom desktop and appdata files, integrating cleanly into your desktop.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><strong>Repositories</strong></li>
+                <li><a href="https://github.com/winepak/winepak" title="General">General</a></li>
+                <li><a href="https://github.com/winepak/winepak-sdk-images" title="Platform & Sdk">Platform & Sdk</a></li>
+                <li><a href="https://github.com/winepak/applications" title="Applications">Applications</a></li>
+            </ul>
+            
+            <ul>
+                <li><strong>Community</strong></li>
+                <li><a href="https://twitter.com/winepakOrg" title="Twitter">Twitter</a></li>
+                <li><a href="https://mastodon.technology/@winepak" title="Mastodon">Mastodon</a></li>
+                <li><a href="https://reddit.com/r/wine_gaming" title="Reddit">Reddit</a></li>
+            </ul>
+            
+            <ul>
+                <li><strong>Developers</strong></li>
+                <li><a href="https://github.com/winepak" title="Contribute">Contribute</a></li>
+                <li><a href="https://github.com/winepak/winepak/wiki" title="Documentation">Documentation</a></li>
+            </ul>
+            
+            <ul>
+                <li><strong>About</strong></li>
+                <li><a href="https://flatpak.org/about" title="About Flatpak">About Flatpak</a></li>
+                <li><a href="https://www.winehq.org/about" title="About Wine">About Wine</a></li>
+                <li><a href="https://status.winepak.org" title="winepak status">winepak status</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,335 @@
+@import url("normalize.css")
+
+/* Clearer */
+.group:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .group { height: 1%; }
+*:first-child+html .group { min-height: 1px; }
+
+.clearer {clear:both}
+
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8ff;
+    color: #222222;
+    font-family: Source Sans Pro,Source Sans,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 0 7px 0;
+}
+
+a {
+    color: #6c2025;
+    text-decoration: none;
+}
+
+code {
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+    font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-size: 85%;
+    padding: 3px 7px;
+}
+
+pre {
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+    word-wrap: normal;
+    overflow: auto;
+    padding: 14px 14px;
+}
+
+pre code {
+    background-color: transparent;
+    display: inline;
+    font-size: 100%;
+    overflow: visible;
+    word-wrap: normal;
+}
+
+/* Layout */
+.container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+header#top {
+    background: #ffffff;
+    border-top: 5px solid #6c2025;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+    padding: 14px 0;
+}
+header#top h1 {
+    color: #6c2025;
+    display: inline-block;
+    margin: 0;
+}
+header#top #logo img {
+    display: block;
+    margin: 0px auto;
+    width: 50px;
+}
+header#top #logo #name {
+    color: #6c2025;
+    display: block;
+    margin: 0;
+}
+header#top nav {
+    display: inline-block;
+    text-align: right;
+}
+header#top nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header#top nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+header#top nav ul li a {
+    color: #222222;
+    font-weight: bold;
+    padding: 14px 21px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+section header {
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    color: #6c2025;
+    padding: 14px 0;
+    margin: 0 0 35px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer {
+    background: #222222;
+    color: #ffffff;
+    padding: 56px 0 35px 0;
+}
+
+footer nav {
+    flex-direction: row;
+    display: flex;
+    max-height: 100%;
+    place-content:
+    flex-start space-around;
+    align-items: flex-start;
+}
+
+footer nav ul {
+    flex: 1 1 0%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+footer nav ul li {
+    display: block;
+}
+
+footer nav ul li:first-child {
+    padding: 0 0 7px 0;
+}
+
+footer nav ul li a {
+    color: #f8f8ff;
+    display: block;
+    padding: 7px 0;
+}
+
+h2.emphasis {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 0 35px;
+}
+h2.emphasis:before,
+h2.emphasis:after {
+    background: rgba(0, 0, 0, .2);
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 7px 0 7px 0;
+}
+
+#landing {
+    padding: 250px 0 350px;
+}
+
+#landing #call-to-action-text {
+    text-align: center;
+}
+
+#setup {
+    background: #f8f8ff;
+    padding: 0 0 105px 0;
+}
+
+#features {
+    background: #f8f8ff;
+    padding: 0 0 21px 0;
+}
+
+/* Steps */
+.step {
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+.step:last-child {
+    border-bottom: 1px solid transparent;
+}
+.step .number {
+    background: #6c2025;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 7px 12px;
+    margin-right: 21px;
+    vertical-align: top;
+}
+.step .instruction {
+    vertical-align: top;
+    padding-top: 7px;
+}
+
+/* Features */
+.feature {
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.feature:last-child {
+    border-bottom: 1px solid transparent;
+}
+.feature.image-right {
+    flex-direction: row-reverse;
+}
+.feature img, .feature video {
+    background: #eeeeee;
+    border-radius: 3px;
+    flex: 600px 0;
+    width: 600px;
+}
+.feature.image-right img, .feature.image-right video {
+    flex: 0 600px;
+    width: 600px;
+    margin-left: 21px;
+}
+.feature .description {
+    flex: 600px 1;
+    margin-left: 21px;
+}
+.feature.image-right .description {
+    flex: 1 600px;
+}
+
+/*
+ * ------------------------------
+ * Responsive CSS
+ * ------------------------------
+ */
+
+/* 1920px+ */
+@media only screen and (min-width: 1920px) {
+
+}
+/* WIDESCREEN */
+@media only screen and (min-width: 1400px) {
+    .container {
+		width: 1300px;
+	}
+}
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {  
+}
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (min-width: 1024px) {
+    .container {
+		width: 80%;
+	}
+}
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (max-width: 1024px) {
+    #landing {
+        padding: 70px 0 105px 0;
+    }
+
+    #setup {
+        padding: 0 0 70px 0;
+    }
+
+    .feature {
+        display: flow-root;
+    }
+    
+    .feature img, .feature video,
+    .feature.image-right img, .feature.image-right video {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .feature .description {
+        margin: 0;
+    }
+}
+/* TABLET/NETBOOK */
+@media only screen and (max-width: 768px) {
+    footer nav {
+        flex-direction: column;
+    }
+    footer nav ul {
+        border-bottom: 1px solid #555555;
+        flex: 1 1 auto;
+        padding-bottom: 21px;
+        margin-bottom: 21px;
+    }
+}
+/* SMALL TABLET */
+@media only screen and (max-width: 600px) {
+    #landing {
+        padding: 21px 0 35px;
+    }
+
+    #setup {
+        padding: 0 0 35px 0;
+    }
+}
+/* MOBILE LANDSCAPE */
+@media only screen and (max-width: 480px) {
+}
+/* MOBILE PORTRAIT */
+@media only screen and (max-width: 320px) {
+}
+/* LANDSCAPE ORIENTATION */
+@media only screen and (orientation: landscape) {
+}
+/* PORTRAIT ORIENTATION */
+@media only screen and (orientation: portrait) {
+}
